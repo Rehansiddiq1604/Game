@@ -1,0 +1,90 @@
+.game-card{
+    background:#1b1b1b;
+    border:1px solid #2d2d2d;
+    border-radius:12px;
+    overflow:hidden;
+    transition:0.3s;
+    display:flex;
+    flex-direction:column;
+}
+
+.game-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 25px rgba(214,40,40,.4);
+}
+
+.game-image{
+    width:100%;
+    height:260px;
+    overflow:hidden;
+}
+
+.game-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:.4s;
+}
+
+.game-card:hover img{
+    transform:scale(1.08);
+}
+
+.game-content{
+    padding:20px;
+}
+
+.game-content h3{
+    color:white;
+    font-size:30px;
+    margin-bottom:10px;
+}
+
+.rating{
+    color:gold;
+    font-size:20px;
+    margin-bottom:12px;
+}
+
+.price{
+    color:#d62828;
+    font-size:28px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.card-buttons{
+    display:flex;
+    gap:10px;
+}
+
+.buy-btn{
+    flex:1;
+    padding:14px;
+    background:#d62828;
+    color:white;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:17px;
+}
+
+.buy-btn:hover{
+    background:#a50f15;
+}
+
+.cart-btn{
+    flex:1;
+    padding:14px;
+    background:transparent;
+    color:white;
+    border:1px solid #777;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:17px;
+}
+
+.cart-btn:hover{
+    background:#333;
+}

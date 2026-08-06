@@ -1,0 +1,152 @@
+.details-page{
+    position:relative;
+    min-height:100vh;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    overflow:hidden;
+}
+
+.details-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.70);
+    backdrop-filter:blur(4px);
+}
+
+.details-container{
+    position:relative;
+    z-index:2;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:70px;
+    min-height:100vh;
+    padding:120px 8%;
+}
+
+.details-image{
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
+
+.details-image img{
+    width:380px;
+    border-radius:18px;
+    box-shadow:0 15px 40px rgba(0,0,0,.7);
+    transition:.4s;
+}
+
+.details-image img:hover{
+    transform:scale(1.03);
+}
+
+.details-info{
+    flex:1;
+    color:white;
+}
+
+.details-info h1{
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+.rating{
+    color:gold;
+    font-size:26px;
+    margin-bottom:20px;
+}
+
+.price{
+    color:#d62828;
+    font-size:42px;
+    font-weight:bold;
+    margin-bottom:25px;
+}
+
+.description{
+    font-size:19px;
+    line-height:1.8;
+    color:#e5e5e5;
+    margin-bottom:30px;
+}
+
+.info-box{
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:12px;
+    padding:20px;
+    margin-bottom:30px;
+    backdrop-filter:blur(8px);
+}
+
+.info-box p{
+    margin:10px 0;
+    color:#f1f1f1;
+}
+
+.detail-buttons{
+    display:flex;
+    gap:15px;
+}
+
+.detail-buttons .buy-btn{
+    padding:15px 35px;
+    background:#d62828;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.detail-buttons .buy-btn:hover{
+    background:#a50f15;
+}
+
+.detail-buttons .cart-btn{
+    padding:15px 35px;
+    background:transparent;
+    color:white;
+    border:1px solid white;
+    border-radius:8px;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.detail-buttons .cart-btn:hover{
+    background:white;
+    color:black;
+}
+
+/* Responsive */
+
+@media(max-width:1000px){
+
+    .details-container{
+        flex-direction:column;
+        text-align:center;
+        padding-top:140px;
+    }
+
+    .details-image img{
+        width:300px;
+    }
+
+    .details-info h1{
+        font-size:42px;
+    }
+
+    .price{
+        font-size:34px;
+    }
+
+    .detail-buttons{
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+
+}

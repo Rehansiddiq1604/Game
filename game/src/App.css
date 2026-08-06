@@ -1,0 +1,776 @@
+/* ===========================
+   GLOBAL
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+}
+
+body{
+    background:#0d1117;
+    overflow-x:hidden;
+    color:white;
+}
+
+a{
+    text-decoration:none;
+}
+
+button{
+    cursor:pointer;
+    transition:.3s;
+}
+
+/* ===========================
+   HERO SECTION
+=========================== */
+
+.hero{
+    position:relative;
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    overflow:hidden;
+    padding-left:8%;
+}
+
+.hero-video{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:-2;
+}
+
+.overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:linear-gradient(
+        to right,
+        rgba(0,0,0,.82),
+        rgba(0,0,0,.45),
+        rgba(0,0,0,.25)
+    );
+    z-index:-1;
+}
+
+.hero-content{
+    width:650px;
+    z-index:2;
+}
+
+.tag{
+    display:inline-block;
+    background:#c1121f;
+    padding:10px 20px;
+    border-radius:5px;
+    font-size:14px;
+    letter-spacing:2px;
+    font-weight:bold;
+    margin-bottom:25px;
+}
+
+.hero-content h1{
+
+    font-size:75px;
+    line-height:1.1;
+    margin-bottom:25px;
+    text-transform:uppercase;
+    font-weight:800;
+
+}
+
+.hero-content p{
+
+    color:#d6d6d6;
+    font-size:22px;
+    line-height:36px;
+    margin-bottom:40px;
+
+}
+
+.buttons{
+
+    display:flex;
+    gap:20px;
+
+}
+
+.buy-btn{
+
+    background:#c1121f;
+    color:white;
+    border:none;
+    padding:16px 38px;
+    border-radius:6px;
+    font-size:18px;
+
+}
+
+.buy-btn:hover{
+
+    background:#950d18;
+
+}
+
+.wish-btn{
+
+    background:transparent;
+    border:2px solid white;
+    color:white;
+    padding:16px 38px;
+    border-radius:6px;
+    font-size:18px;
+
+}
+
+.wish-btn:hover{
+
+    background:white;
+    color:black;
+
+}
+
+/* ===========================
+   POPULAR GAMES
+=========================== */
+
+.featured{
+
+    background:#10151d;
+    padding:90px 7%;
+
+}
+
+.featured h2{
+
+    font-size:42px;
+    margin-bottom:45px;
+    border-left:5px solid #c1121f;
+    padding-left:18px;
+
+}
+
+.games-grid{
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+
+}
+
+.game-card{
+
+    background:#1b1b1b;
+    border-radius:12px;
+    overflow:hidden;
+    transition:.35s;
+
+}
+
+.game-card:hover{
+
+    transform:translateY(-10px);
+    box-shadow:0 12px 28px rgba(193,18,31,.45);
+
+}
+
+.game-image{
+
+    width:100%;
+    height:260px;
+    overflow:hidden;
+
+}
+
+.game-image img{
+
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.4s;
+
+}
+
+.game-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.game-content{
+
+    padding:22px;
+
+}
+
+.game-content h3{
+
+    font-size:24px;
+    margin-bottom:15px;
+
+}
+
+.rating{
+
+    color:gold;
+    margin-bottom:15px;
+    font-size:18px;
+
+}
+
+.price{
+
+    color:#ff4040;
+    font-size:30px;
+    font-weight:bold;
+    margin-bottom:20px;
+
+}
+
+.card-buttons{
+
+    display:flex;
+    gap:12px;
+
+}
+
+.card-buttons button{
+
+    flex:1;
+    padding:14px;
+    border-radius:6px;
+    border:none;
+    font-size:16px;
+
+}
+
+.cart-btn{
+
+    background:#2d2d2d;
+    color:white;
+
+}
+
+.cart-btn:hover{
+
+    background:#444;
+
+}
+
+/* ===========================
+   GENRES PAGE
+=========================== */
+
+.genres-page{
+    position:relative;
+    min-height:100vh;
+    background:transparent;
+    overflow:hidden;
+    padding:120px 7%;
+}
+
+.genres-page h1{
+    text-align:center;
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.genres-page p{
+    text-align:center;
+    color:#bdbdbd;
+    font-size:20px;
+    margin-bottom:60px;
+}
+
+.genre-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:25px;
+}
+
+.genre-card{
+    position:relative;
+    height:320px;
+    overflow:hidden;
+    border-radius:15px;
+    cursor:pointer;
+    transition:.4s;
+}
+
+.genre-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 30px rgba(193,18,31,.45);
+}
+
+.genre-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.genre-card:hover img{
+    transform:scale(1.1);
+}
+
+.genre-overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to top,
+    rgba(0,0,0,.95),
+    rgba(0,0,0,.2));
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    flex-direction:column;
+    padding-bottom:30px;
+}
+
+.genre-overlay h2{
+    font-size:30px;
+    margin-bottom:15px;
+}
+
+.genre-overlay button{
+    background:#c1121f;
+    border:none;
+    color:white;
+    padding:12px 28px;
+    border-radius:5px;
+    font-size:16px;
+}
+
+.genre-overlay button:hover{
+    background:#950d18;
+}
+
+/* ===========================
+   GAME DETAILS
+=========================== */
+
+.details-page{
+    min-height:100vh;
+    background:#10151d;
+    padding:80px 7%;
+    display:flex;
+    gap:60px;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.details-image{
+    flex:1;
+    min-width:400px;
+}
+
+.details-image img{
+    width:100%;
+    border-radius:15px;
+    box-shadow:0 0 30px rgba(0,0,0,.5);
+}
+
+.details-info{
+    flex:1;
+    min-width:420px;
+}
+
+.details-info h1{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.details-info .rating{
+    color:gold;
+    font-size:22px;
+    margin-bottom:20px;
+}
+
+.details-info .price{
+    color:#ff4040;
+    font-size:45px;
+    margin-bottom:25px;
+}
+
+.description{
+    color:#d0d0d0;
+    line-height:34px;
+    font-size:19px;
+    margin-bottom:35px;
+}
+
+.info-box{
+    background:#1b1b1b;
+    padding:25px;
+    border-radius:10px;
+    margin-bottom:35px;
+}
+
+.info-box p{
+    margin:12px 0;
+    color:#d9d9d9;
+}
+
+.detail-buttons{
+    display:flex;
+    gap:20px;
+}
+
+.detail-buttons button{
+    padding:16px 35px;
+    border:none;
+    border-radius:6px;
+    font-size:18px;
+}
+
+.detail-buttons .buy-btn{
+    background:#c1121f;
+    color:white;
+}
+
+.detail-buttons .buy-btn:hover{
+    background:#950d18;
+}
+
+.detail-buttons .wish-btn{
+    background:#2c2c2c;
+    color:white;
+    border:1px solid #555;
+}
+
+.detail-buttons .wish-btn:hover{
+    background:#3d3d3d;
+}
+
+/* ===========================
+   CART PAGE
+=========================== */
+
+.cart-page{
+    min-height:100vh;
+    background:#0d1117;
+    padding:90px 7%;
+    color:white;
+}
+
+.cart-page h1{
+    font-size:48px;
+    margin-bottom:45px;
+}
+
+.cart-card{
+    display:flex;
+    align-items:center;
+    gap:35px;
+    background:#1b1b1b;
+    padding:25px;
+    border-radius:12px;
+    margin-bottom:40px;
+}
+
+.cart-card img{
+    width:240px;
+    border-radius:10px;
+}
+
+.cart-info{
+    flex:1;
+}
+
+.cart-info h2{
+    font-size:38px;
+    margin-bottom:15px;
+}
+
+.cart-info p{
+    color:gold;
+    margin-bottom:15px;
+    font-size:20px;
+}
+
+.cart-info h3{
+    color:#ff4040;
+    font-size:34px;
+}
+
+.total{
+    text-align:right;
+}
+
+.total h2{
+    margin-bottom:20px;
+    font-size:34px;
+}
+
+.total button{
+    background:#c1121f;
+    color:white;
+    border:none;
+    padding:16px 35px;
+    font-size:18px;
+    border-radius:6px;
+}
+
+.total button:hover{
+    background:#950d18;
+}
+
+/* ===========================
+   CHECKOUT
+=========================== */
+
+.checkout{
+    min-height:100vh;
+    background:#0d1117;
+    padding:90px 7%;
+    color:white;
+}
+
+.checkout h1{
+    text-align:center;
+    font-size:52px;
+    margin-bottom:50px;
+}
+
+.checkout-box{
+    display:flex;
+    gap:50px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.billing{
+    width:520px;
+    background:#1b1b1b;
+    padding:30px;
+    border-radius:12px;
+}
+
+.billing h2{
+    margin-bottom:25px;
+}
+
+.billing input{
+    width:100%;
+    padding:16px;
+    margin:12px 0;
+    background:#2a2a2a;
+    color:white;
+    border:none;
+    border-radius:6px;
+    font-size:16px;
+}
+
+.billing input:focus{
+    outline:2px solid #c1121f;
+}
+
+.summary{
+    width:360px;
+    background:#1b1b1b;
+    padding:25px;
+    border-radius:12px;
+    text-align:center;
+}
+
+.checkout-image{
+    width:100%;
+    border-radius:10px;
+    margin-bottom:20px;
+}
+
+.summary h2{
+    margin-bottom:15px;
+}
+
+.summary p{
+    color:gold;
+    margin-bottom:15px;
+}
+
+.summary h3{
+    color:#ff4040;
+    font-size:32px;
+    margin-bottom:20px;
+}
+
+.summary button{
+    width:100%;
+    padding:16px;
+    background:#c1121f;
+    color:white;
+    border:none;
+    border-radius:6px;
+    font-size:18px;
+}
+
+.summary button:hover{
+    background:#950d18;
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#111;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#c1121f;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#950d18;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:1200px){
+
+.games-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.genre-grid{
+    grid-template-columns:repeat(3,1fr);
+}
+
+.hero-content h1{
+    font-size:60px;
+}
+
+}
+
+@media(max-width:900px){
+
+.hero{
+    justify-content:center;
+    padding:30px;
+}
+
+.hero-content{
+    text-align:center;
+}
+
+.buttons{
+    justify-content:center;
+}
+
+.details-page{
+    flex-direction:column;
+}
+
+.cart-card{
+    flex-direction:column;
+    text-align:center;
+}
+
+}
+
+@media(max-width:768px){
+
+.games-grid{
+    grid-template-columns:1fr;
+}
+
+.genre-grid{
+    grid-template-columns:1fr;
+}
+
+.hero-content h1{
+    font-size:42px;
+}
+
+.hero-content p{
+    font-size:18px;
+    line-height:30px;
+}
+
+.buttons{
+    flex-direction:column;
+}
+
+.checkout-box{
+    flex-direction:column;
+}
+
+.billing{
+    width:100%;
+}
+
+.summary{
+    width:100%;
+}
+
+.details-image,
+.details-info{
+    min-width:100%;
+}
+
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+.footer{
+    background:#080b10;
+    padding:40px;
+    text-align:center;
+    color:#999;
+    margin-top:80px;
+}
+
+.footer h3{
+    color:white;
+    margin-bottom:15px;
+}
+
+.footer p{
+    line-height:30px;
+}
+
+/* ==========================================
+   Genre Background Video
+========================================== */
+
+.genre-video{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:-2;
+}
+
+.genre-video-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.45);
+    z-index:-1;
+}
+
+.featured{
+    position:relative;
+    z-index:2;
+    background:transparent;
+}

@@ -1,0 +1,141 @@
+.checkout{
+
+    min-height:100vh;
+
+    background:#10151d;
+
+    color:white;
+
+    padding:60px;
+
+}
+
+.checkout h1{
+
+    text-align:center;
+
+    color:#d62828;
+
+    margin-bottom:50px;
+
+    font-size:48px;
+
+}
+
+.checkout-box{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:50px;
+
+    flex-wrap:wrap;
+
+}
+
+.billing{
+
+    width:500px;
+
+    background:#1b1b1b;
+
+    padding:30px;
+
+    border-radius:10px;
+
+}
+
+.billing h2{
+
+    margin-bottom:20px;
+
+}
+
+.billing input{
+
+    width:100%;
+
+    padding:15px;
+
+    margin:12px 0;
+
+    background:#2c2c2c;
+
+    border:none;
+
+    border-radius:6px;
+
+    color:white;
+
+}
+
+.summary{
+
+    width:350px;
+
+    background:#1b1b1b;
+
+    padding:25px;
+
+    border-radius:10px;
+
+    text-align:center;
+
+}
+
+.checkout-image{
+
+    width:100%;
+
+    border-radius:10px;
+
+    margin-bottom:20px;
+
+}
+
+.summary p{
+
+    color:gold;
+
+    font-size:20px;
+
+    margin:15px 0;
+
+}
+
+.summary h3{
+
+    color:#d62828;
+
+    font-size:32px;
+
+}
+
+.summary button{
+
+    width:100%;
+
+    padding:15px;
+
+    margin-top:20px;
+
+    border:none;
+
+    background:#d62828;
+
+    color:white;
+
+    font-size:18px;
+
+    border-radius:6px;
+
+    cursor:pointer;
+
+}
+
+.summary button:hover{
+
+    background:#9d0208;
+
+}

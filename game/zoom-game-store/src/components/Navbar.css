@@ -1,0 +1,55 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #282c34;
+  color: white;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu li {
+  display: inline;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+.rightSide {
+  display: flex;
+  align-items: center;
+}
+
+.rightSide input {
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.rightSide button {
+  padding: 5px 10px;
+  background-color: #61dafb;
+  border: none;
+  color: black;
+  cursor: pointer;
+}
+
+.rightSide button:hover {
+  background-color: #21a1f1;
+}
